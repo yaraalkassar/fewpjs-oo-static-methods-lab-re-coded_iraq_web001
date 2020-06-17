@@ -5,7 +5,6 @@ class Formatter {
   }
   static sanitize(string){
 return string.replace(/[\W_]+/g," ");
-
   }
   static titleize(){
 
