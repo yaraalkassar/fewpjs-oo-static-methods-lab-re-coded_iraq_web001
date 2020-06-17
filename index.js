@@ -3,7 +3,8 @@ class Formatter {
   static capitalize(string){
     return string.charAt(0).toUpperCase() + string.substring(1);
   }
-  static sanitize(){
+  static sanitize(string){
+return string.replace(/[\W_]+/g," ");
 
   }
   static titleize(){
