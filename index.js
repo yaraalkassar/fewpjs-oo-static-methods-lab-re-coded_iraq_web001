@@ -7,11 +7,22 @@ class Formatter {
 return string.replace(/[^A-Za-z0-9-' ]+/g, '')
   }
   static titleize(string){
-    let notCapitalizedWords = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
-    string[0] = this.capitalize(string[0]);
-
-string.forEach(word =>{
-
-})
+    let exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
+    let result = [];
+    let arrayOfWords = string.split(" ")
+    for (let n = 0; n < arrayOfWords.length; n++) {
+      if (n == 0) {
+        result.push(this.capitalize(arrayOfWords[n]))
+      } else {
+        if (exceptions.includes(arrayOfWords[n])) {
+          result.push(arrayOfWords[n])
+        } else {
+          result.push(this.capitalize(arrayOfWords[n]))
+        }
+      }
+    }
+    return result.join(" ");
+  }
+     }
   }
 }
