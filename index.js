@@ -4,7 +4,7 @@ class Formatter {
     return string.charAt(0).toUpperCase() + string.substring(1);
   }
   static sanitize(string){
-return string.replace(/[^a-z0-9]+/gi, " ");
+return string.replace(/[^a-zA-Z 0-9]+/g,'');
   }
   static titleize(){
 
