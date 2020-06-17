@@ -11,7 +11,7 @@ return string.replace(/[^A-Za-z0-9-' ]+/g, '')
     string[0] = this.capitalize(string[0]);
 
 string.forEach(word =>{
-  
+
 })
   }
 }
